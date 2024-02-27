@@ -2,7 +2,7 @@ class TCPServer:
     def __init__(self, port):
         import socket
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.sock.bind(('', port))  #bind 함수 인자로 튜플을 넣어줘야함
+        self.sock.bind(('127.0.0.1', port))  #bind 함수 인자로 튜플을 넣어줘야함
         self.sock.listen(1)
 
     def Accept(self):
